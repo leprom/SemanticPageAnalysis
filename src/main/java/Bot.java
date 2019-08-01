@@ -16,7 +16,7 @@ public class Bot {
         String s = "Семантический анализ текста Адвего для SEO онлайн — профессиональный инструмент для оценки качества текстов, seo оптимизации статей и поиска ключевых слов в тексте. Проверьте количество символов, тошноту и водность, плотность ключевых слов и фраз онлайн, семантическое ядро текста бесплатно!";
         TextAnalyse textAnalyse2 = new TextAnalyse(s);
         System.out.println(textAnalyse2.getCharactersWithoutSpaces()+" "+textAnalyse2.getCharactersWithSpaces()
-        +" Words:"+ textAnalyse2.getWords());
+        +" Words:"+ textAnalyse2.getWords()+" UWords:"+ textAnalyse2.getUniqWords() );
 
 
 

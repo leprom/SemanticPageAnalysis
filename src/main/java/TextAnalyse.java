@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 public class TextAnalyse {
 
 
@@ -45,6 +47,27 @@ public class TextAnalyse {
         }
 
         return characters;
+    }
+
+    public int getUniqWords(){
+        // Найти и исправить ошибку в подсчете уникальных слов
+        HashMap <String, Integer> hashMap = new HashMap<String, Integer>();
+        String str = "";
+        for (int i = 0; i < text.length(); i++) {
+            if (text.charAt(i) == ' ' || text.charAt(i) == ',' || text.charAt(i) == '.') {
+
+                if(hashMap.containsKey(str)) {
+                    hashMap.put(str, hashMap.get(str)+1);
+                }
+                else hashMap.put(str,1);
+                str ="";
+            }
+            else {
+                str+=text.charAt(i);
+            }
+        }
+
+        return hashMap.size();
     }
 
 
