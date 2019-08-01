@@ -37,5 +37,15 @@ public class TextAnalyse {
         return characters;
     }
 
+    public int getWords(){
+        // Исправить ошибку с "онлайн — профессиональный" = 3 слова
+        int characters = 1;
+        for (int i = 0; i < text.length(); i++) {
+            if (text.charAt(i) == ' ') characters++;
+        }
+
+        return characters;
+    }
+
 
 }
