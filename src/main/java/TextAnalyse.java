@@ -51,6 +51,7 @@ public class TextAnalyse {
 
     public int getUniqWords(){
         // Найти и исправить ошибку в подсчете уникальных слов
+        // Однокоренные слова не считать
         HashMap <String, Integer> hashMap = new HashMap<String, Integer>();
         String str = "";
         for (int i = 0; i < text.length(); i++) {
